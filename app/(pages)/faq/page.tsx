@@ -19,7 +19,7 @@ const comprehensiveFAQs = [
   {
     question: 'How long has Las Vegas Nevada Home Sales been in business?',
     answer:
-      'Las Vegas Nevada Home Sales is led by Dr. Jan Duffy, in real estate since 1983. Our team of experienced professionals has helped thousands of clients buy, sell, and invest in Las Vegas properties with exceptional results and personalized service.',
+      'Las Vegas Nevada Home Sales is led by Dr. Jan Duffy, in real estate since 1983. Our team has completed 500+ transactions helping clients buy, sell, and invest in Las Vegas properties with exceptional results and personalized service.',
   },
   {
     question: 'What makes Las Vegas Nevada Home Sales different from other real estate companies?',

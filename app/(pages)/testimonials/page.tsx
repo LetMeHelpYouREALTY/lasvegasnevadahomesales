@@ -218,8 +218,8 @@ export default function TestimonialsPage() {
               <div className="text-sm text-gray-600">In Real Estate</div>
             </div>
             <div className="text-center">
-              <div className="mb-2 text-3xl font-bold text-purple-600">1000+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
+              <div className="mb-2 text-3xl font-bold text-purple-600">500+</div>
+              <div className="text-sm text-gray-600">Transactions</div>
             </div>
           </div>
         </div>
