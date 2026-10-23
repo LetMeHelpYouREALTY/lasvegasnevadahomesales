@@ -214,8 +214,8 @@ export default function TestimonialsPage() {
               <div className="text-sm text-gray-600">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="mb-2 text-3xl font-bold text-blue-600">15+</div>
-              <div className="text-sm text-gray-600">Years Experience</div>
+              <div className="mb-2 text-3xl font-bold text-blue-600">Since 1983</div>
+              <div className="text-sm text-gray-600">In Real Estate</div>
             </div>
             <div className="text-center">
               <div className="mb-2 text-3xl font-bold text-purple-600">1000+</div>

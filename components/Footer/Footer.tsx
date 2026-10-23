@@ -200,7 +200,10 @@ export function Footer({ className = '' }: FooterProps) {
                 © {currentYear} Las Vegas Real Estate Expert | Nevada Home Sales & Property Listings
               </p>
               <p className="mb-2">
-                Dr. Jan Duffy, Licensed Realtor #S.0197614 | Las Vegas Valley Specialist
+                Dr. Jan Duffy, REALTOR® | Las Vegas Valley Specialist
+              </p>
+              <p className="mb-2">
+                Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License S.0197614.LLC
               </p>
               <p className="mb-4">
                 Call/Text: <a href="tel:+17025001981" className="text-blue-400 hover:text-blue-300 font-semibold">(702) 500-1981</a> | 
