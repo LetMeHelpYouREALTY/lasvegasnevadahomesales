@@ -40,7 +40,7 @@ export default function HomeValuationPage() {
             <div className="mb-8 flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
-                <span>In Real Estate Since 1983</span>
+                <span>Licensed Since 2008</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
