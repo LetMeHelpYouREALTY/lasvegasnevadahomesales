@@ -16,6 +16,7 @@ interface ParsedInsight {
   category: string
   publishedDate: string
   imageUrl?: string
+  section?: 'market-stability' | 'inventory-trends' | 'investment-outlook' | 'general'
 }
 
 // Cache the feed data for 1 hour to avoid hitting the external API too frequently
@@ -35,6 +36,38 @@ function extractCategoryFromTitle(title: string): string {
   
   if (lowerTitle.includes('rate') || lowerTitle.includes('mortgage') || lowerTitle.includes('market')) {
     return 'market-trends'
+  }
+  
+  return 'general'
+}
+
+function extractSectionFromContent(title: string, description: string): 'market-stability' | 'inventory-trends' | 'investment-outlook' | 'general' {
+  const lowerTitle = title.toLowerCase()
+  const lowerDesc = description.toLowerCase()
+  const combined = `${lowerTitle} ${lowerDesc}`
+  
+  // Market Stability indicators
+  if (combined.includes('stability') || combined.includes('stabilizing') || 
+      combined.includes('steady') || combined.includes('consistent') ||
+      combined.includes('fundamentals') || combined.includes('growth') ||
+      combined.includes('mortgage rate') || combined.includes('rate stability')) {
+    return 'market-stability'
+  }
+  
+  // Inventory Trends indicators
+  if (combined.includes('inventory') || combined.includes('supply') || 
+      combined.includes('demand') || combined.includes('homes for sale') ||
+      combined.includes('new construction') || combined.includes('builders') ||
+      combined.includes('available') || combined.includes('stock')) {
+    return 'inventory-trends'
+  }
+  
+  // Investment Outlook indicators
+  if (combined.includes('investment') || combined.includes('opportunity') ||
+      combined.includes('outlook') || combined.includes('forecast') ||
+      combined.includes('favorable') || combined.includes('conditions') ||
+      combined.includes('buyers and sellers') || combined.includes('market conditions')) {
+    return 'investment-outlook'
   }
   
   return 'general'
@@ -90,21 +123,27 @@ async function fetchMarketInsights(): Promise<ParsedInsight[]> {
       }
     }
 
-    // Convert to our format
-    const insights: ParsedInsight[] = items.map((item, index) => ({
-      id: `insight-${index}`,
-      title: item.title,
-      description: cleanDescription(item.description),
-      link: item.link,
-      category: extractCategoryFromTitle(item.title),
-      publishedDate: new Date(item.pubDate).toISOString()
-    }))
+    // Convert to our format with enhanced categorization
+    const insights: ParsedInsight[] = items.map((item, index) => {
+      const category = extractCategoryFromTitle(item.title)
+      const section = extractSectionFromContent(item.title, item.description)
+      
+      return {
+        id: `insight-${index}`,
+        title: item.title,
+        description: cleanDescription(item.description),
+        link: item.link,
+        category,
+        section,
+        publishedDate: new Date(item.pubDate).toISOString()
+      }
+    })
 
     return insights
   } catch (error) {
     console.error('Error fetching market insights:', error)
     
-    // Return fallback data if the feed is unavailable
+    // Return enhanced fallback data with proper section categorization
     return [
       {
         id: 'fallback-1',
@@ -112,6 +151,7 @@ async function fetchMarketInsights(): Promise<ParsedInsight[]> {
         description: 'When selling your house, the price you choose isn\'t just a number, it\'s a strategy. And in today\'s market, that strategy needs to be sharp.',
         link: 'https://www.simplifyingthemarket.com/en/2025/07/31/the-3-things-you-risk-by-pricing-too-high',
         category: 'sellers',
+        section: 'investment-outlook',
         publishedDate: new Date().toISOString()
       },
       {
@@ -120,6 +160,7 @@ async function fetchMarketInsights(): Promise<ParsedInsight[]> {
         description: 'According to Fannie Mae, 90% of buyers don\'t actually know what credit score lenders are looking for, or they overestimate the minimum needed.',
         link: 'https://www.simplifyingthemarket.com/en/2025/07/30/what-credit-score-do-you-really-need-to-buy-a-home',
         category: 'buyers',
+        section: 'investment-outlook',
         publishedDate: new Date().toISOString()
       },
       {
@@ -128,6 +169,16 @@ async function fetchMarketInsights(): Promise<ParsedInsight[]> {
         description: 'Over the past few years, affordability has been the biggest challenge for homebuyers. But something pretty encouraging is happening.',
         link: 'https://www.simplifyingthemarket.com/en/2025/07/16/mortgage-rates-are-stabilizing-how-that-helps-todays-buyers',
         category: 'market-trends',
+        section: 'market-stability',
+        publishedDate: new Date().toISOString()
+      },
+      {
+        id: 'fallback-4',
+        title: 'Why a Newly Built Home Might Be the Move Right Now',
+        description: 'Are you looking for better home prices, or even a lower mortgage rate? You might find both in one place: a newly built home.',
+        link: 'https://www.simplifyingthemarket.com/en/2025/07/17/why-a-newly-built-home-might-be-the-move-right-now',
+        category: 'buyers',
+        section: 'inventory-trends',
         publishedDate: new Date().toISOString()
       }
     ]
@@ -138,6 +189,7 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
     const category = searchParams.get('category') || 'all'
+    const section = searchParams.get('section') || 'all'
     const limit = parseInt(searchParams.get('limit') || '3')
     
     // Check cache first
@@ -146,6 +198,10 @@ export async function GET(request: NextRequest) {
       
       if (category !== 'all') {
         filteredInsights = filteredInsights.filter(insight => insight.category === category)
+      }
+      
+      if (section !== 'all') {
+        filteredInsights = filteredInsights.filter(insight => insight.section === section)
       }
       
       return NextResponse.json({
@@ -157,10 +213,14 @@ export async function GET(request: NextRequest) {
     // Fetch fresh data
     const insights = await fetchMarketInsights()
     
-    // Filter by category if specified
+    // Filter by category and section if specified
     let filteredInsights = insights
     if (category !== 'all') {
-      filteredInsights = insights.filter(insight => insight.category === category)
+      filteredInsights = filteredInsights.filter(insight => insight.category === category)
+    }
+    
+    if (section !== 'all') {
+      filteredInsights = filteredInsights.filter(insight => insight.section === section)
     }
     
     // Update cache

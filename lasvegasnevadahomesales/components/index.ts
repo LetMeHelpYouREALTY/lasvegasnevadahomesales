@@ -17,6 +17,7 @@ export { EmailJSContactForm } from './Forms/EmailJSContactForm'
 // Market Data
 export { MarketDataWidget } from './MarketData/MarketDataWidget'
 export { MarketInsightsWidget } from './MarketInsights/MarketInsightsWidget'
+export { MarketSectionWidget } from './MarketInsights/MarketSectionWidget'
 
 // Property Components
 export { FeaturedProperties } from './Properties/FeaturedProperties'
