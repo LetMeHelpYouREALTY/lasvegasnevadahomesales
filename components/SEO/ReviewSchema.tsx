@@ -85,36 +85,10 @@ interface ReviewSchemaProps {
   itemType?: string;
 }
 
-export default function ReviewSchema({
-  reviews = serviceReviews,
-  aggregateRating = serviceAggregateRating,
-  itemName = 'Las Vegas Nevada Home Sales',
-  itemType = 'RealEstateAgent',
-}: ReviewSchemaProps) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': itemType,
-    name: itemName,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: aggregateRating.ratingValue,
-      reviewCount: aggregateRating.reviewCount,
-    },
-    review: reviews.map((review) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: review.author },
-      reviewRating: { '@type': 'Rating', ratingValue: review.rating },
-      reviewBody: review.text,
-      datePublished: review.date,
-    })),
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  );
+// Self-reported ratings and sample reviews are not published (Oct 29, 2026): Google treats a
+// business's own AggregateRating as self-serving, and these figures have no source on file.
+export default function ReviewSchema(_props: ReviewSchemaProps) {
+  return null;
 }
 
 export { ReviewSchema };
