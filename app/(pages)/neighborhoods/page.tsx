@@ -17,16 +17,16 @@ const neighborhoods = [
     description: 'Master-planned community with luxury homes, golf courses, and shopping centers',
     medianPrice: '$650,000',
     image: '/images/neighborhoods/summerlin.jpg',
-    features: ['Golf Courses', 'Shopping Centers', 'Parks & Trails', 'Top Schools'],
+    features: ['Golf Courses', 'Shopping Centers', 'Parks & Trails', 'Nearby Public Schools'],
     color: 'from-green-400 to-green-600',
   },
   {
     name: 'Henderson',
     slug: 'henderson',
-    description: 'Family-friendly city with excellent schools, parks, and affordable housing',
+    description: 'City with nearby schools, parks, and affordable housing',
     medianPrice: '$450,000',
     image: '/images/neighborhoods/henderson.jpg',
-    features: ['Family-Friendly', 'Great Schools', 'Parks & Recreation', 'Affordable'],
+    features: ['Parks & Recreation', 'Nearby Schools', 'Affordable'],
     color: 'from-blue-400 to-blue-600',
   },
   {
@@ -59,10 +59,10 @@ const neighborhoods = [
   {
     name: 'Spring Valley',
     slug: 'spring-valley',
-    description: 'Diverse community with good schools and convenient access to the Strip',
+    description: 'Diverse community with nearby public schools and convenient access to the Strip',
     medianPrice: '$350,000',
     image: '/images/neighborhoods/spring-valley.jpg',
-    features: ['Diverse Community', 'Good Schools', 'Strip Access', 'Established Area'],
+    features: ['Diverse Community', 'Nearby public schools', 'Strip Access', 'Established Area'],
     color: 'from-indigo-400 to-indigo-600',
   },
 ];
@@ -126,7 +126,7 @@ export default function NeighborhoodsPage() {
                   aria-label="Select lifestyle preference"
                 >
                   <option>Any Lifestyle</option>
-                  <option>Family-Friendly</option>
+                  <option>Parks & Recreation</option>
                   <option>Urban Living</option>
                   <option>Luxury</option>
                   <option>Retirement</option>
@@ -146,7 +146,7 @@ export default function NeighborhoodsPage() {
                   <option>Golf Courses</option>
                   <option>Parks & Trails</option>
                   <option>Shopping Centers</option>
-                  <option>Top Schools</option>
+                  <option>Nearby Public Schools</option>
                 </select>
               </div>
             </div>

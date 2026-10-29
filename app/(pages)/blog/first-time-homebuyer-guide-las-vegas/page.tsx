@@ -206,12 +206,12 @@ export default function FirstTimeHomebuyerGuidePage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-xl">Green Valley</CardTitle>
-                  <CardDescription>Affordable family-friendly area</CardDescription>
+                  <CardDescription>Affordable area</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-gray-700">
                     <li>• Average price: $450,000</li>
-                    <li>• Great schools</li>
+                    <li>• Nearby public schools</li>
                     <li>• Family amenities</li>
                     <li>• Growing community</li>
                   </ul>
@@ -242,7 +242,7 @@ export default function FirstTimeHomebuyerGuidePage() {
                   <ul className="space-y-2 text-gray-700">
                     <li>• Average price: $400,000</li>
                     <li>• Close to everything</li>
-                    <li>• Established neighborhood</li>
+                    <li>• Older neighborhood</li>
                     <li>• Good resale value</li>
                   </ul>
                 </CardContent>

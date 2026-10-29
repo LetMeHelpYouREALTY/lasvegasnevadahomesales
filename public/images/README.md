@@ -23,7 +23,7 @@ public/images/
 
 **Files to add**:
 - `summerlin.jpg` - Summerlin luxury homes and golf course
-- `henderson.jpg` - Henderson family-friendly neighborhood
+- `henderson.jpg` - Henderson neighborhood
 - `green-valley.jpg` - Green Valley affordable homes
 - `downtown.jpg` - Downtown Las Vegas urban living
 

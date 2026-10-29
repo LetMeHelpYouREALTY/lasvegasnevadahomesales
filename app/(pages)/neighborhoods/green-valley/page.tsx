@@ -97,13 +97,13 @@ export default function GreenValleyPage() {
                 About Green Valley
               </h2>
               <p className="mb-6 text-lg text-gray-600">
-                Green Valley is a well-established neighborhood in Henderson, Nevada, known for its
-                affordability, convenience, and family-friendly atmosphere. This growing community
+                Green Valley is an older neighborhood in Henderson, Nevada, known for its
+                affordability, convenience, and parks and community amenities. This growing community
                 offers a great balance of suburban living with easy access to shopping, dining, and
                 entertainment.
               </p>
               <p className="mb-6 text-lg text-gray-600">
-                With its proximity to major employers, excellent schools, and abundant amenities,
+                With its proximity to major employers, nearby public schools, and abundant amenities,
                 Green Valley has become a popular choice for families, first-time homebuyers, and
                 those looking for value in the Las Vegas real estate market.
               </p>
@@ -118,7 +118,7 @@ export default function GreenValleyPage() {
                 </div>
                 <div className="flex items-center">
                   <div className="mr-3 h-2 w-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-700">Excellent schools and parks</span>
+                  <span className="text-gray-700">Nearby public schools and parks</span>
                 </div>
                 <div className="flex items-center">
                   <div className="mr-3 h-2 w-2 rounded-full bg-purple-500"></div>

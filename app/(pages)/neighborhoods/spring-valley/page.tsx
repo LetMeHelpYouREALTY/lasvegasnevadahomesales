@@ -5,12 +5,12 @@ import { RealScoutYourListings } from '../../../../components/RealScout/RealScou
 export const metadata: Metadata = {
   title: 'Spring Valley Las Vegas Real Estate | Central Location Homes for Sale | Las Vegas Nevada Home Sales',
   description:
-    'Find homes for sale in Spring Valley Las Vegas. Central location with convenient access to everything, great schools, and diverse housing options. Expert real estate guidance from Las Vegas Nevada Home Sales.',
+    'Find homes for sale in Spring Valley Las Vegas. Central location with convenient access to everything, nearby public schools, and diverse housing options. Expert real estate guidance from Las Vegas Nevada Home Sales.',
   keywords:
-    'Spring Valley Las Vegas real estate, Spring Valley homes for sale, central Las Vegas homes, Las Vegas Nevada Home Sales, convenient location, diverse housing options, established neighborhood',
+    'Spring Valley Las Vegas real estate, Spring Valley homes for sale, central Las Vegas homes, Las Vegas Nevada Home Sales, convenient location, diverse housing options, older neighborhood',
   openGraph: {
     title: 'Spring Valley Las Vegas Real Estate | Central Location Homes for Sale',
-    description: 'Find homes for sale in Spring Valley Las Vegas. Central location with convenient access to everything, great schools, and diverse housing options.',
+    description: 'Find homes for sale in Spring Valley Las Vegas. Central location with convenient access to everything, nearby public schools, and diverse housing options.',
     url: 'https://lasvegasnevadahomesales.com/neighborhoods/spring-valley',
     siteName: 'Las Vegas Nevada Home Sales',
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Spring Valley Las Vegas Real Estate | Central Location Homes for Sale',
-    description: 'Find homes for sale in Spring Valley Las Vegas. Central location with convenient access to everything, great schools, and diverse housing options.',
+    description: 'Find homes for sale in Spring Valley Las Vegas. Central location with convenient access to everything, nearby public schools, and diverse housing options.',
     images: ['https://lasvegasnevadahomesales.com/images/og-spring-valley.jpg'],
   },
 };
@@ -44,7 +44,7 @@ export default function SpringValleyPage() {
             </h1>
             <p className="mb-8 text-xl text-orange-100 md:text-2xl">
               Discover the convenience of central Las Vegas living with diverse housing 
-              options, excellent schools, and easy access to everything the city offers.
+              options, nearby public schools, and easy access to everything the city offers.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button
@@ -78,12 +78,12 @@ export default function SpringValleyPage() {
               </h2>
               <p className="mb-6 text-lg text-gray-700">
                 Spring Valley offers the perfect balance of suburban comfort and urban convenience. 
-                This established neighborhood provides easy access to the Las Vegas Strip, 
+                This older neighborhood provides easy access to the Las Vegas Strip, 
                 downtown, and major employment centers while maintaining a residential feel.
               </p>
               <p className="mb-8 text-lg text-gray-700">
                 With a diverse mix of housing options from single-family homes to townhouses, 
-                Spring Valley appeals to first-time buyers, growing families, and empty nesters alike.
+                Spring Valley appeals to first-time buyers, move-up buyers, and downsizers alike.
               </p>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="rounded-lg bg-orange-50 p-6">
@@ -133,9 +133,9 @@ export default function SpringValleyPage() {
             </div>
             <div className="rounded-lg bg-white p-6 shadow-lg">
               <div className="mb-4 text-4xl text-orange-600">🏫</div>
-              <h3 className="mb-2 text-xl font-semibold text-gray-900">Excellent Schools</h3>
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">Nearby Public Schools</h3>
               <p className="text-gray-700">
-                Top-rated schools including Spring Valley High School and local elementary schools
+                Nearby public schools including Spring Valley High School and local elementary schools
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-lg">

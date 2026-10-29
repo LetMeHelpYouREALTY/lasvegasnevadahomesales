@@ -19,7 +19,7 @@ const comprehensiveFAQs = [
   {
     question: 'How long has Las Vegas Nevada Home Sales been in business?',
     answer:
-      'Las Vegas Nevada Home Sales is led by Dr. Jan Duffy, Top 1% Las Vegas REALTOR®, in real estate since 1983. Our team has completed 500+ transactions helping clients buy, sell, and invest in Las Vegas properties with exceptional results and personalized service.',
+      'Las Vegas Nevada Home Sales is led by Dr. Jan Duffy, Las Vegas REALTOR®, licensed since 2008 · 35 years in Las Vegas. The Dr. Duffy Group has completed 500+ sales, helping clients buy, sell, and invest in Las Vegas properties with exceptional results and personalized service.',
   },
   {
     question: 'What makes Las Vegas Nevada Home Sales different from other real estate companies?',
@@ -46,7 +46,7 @@ const comprehensiveFAQs = [
   {
     question: 'What neighborhoods should I consider when buying in Las Vegas?',
     answer:
-      'Popular neighborhoods include Summerlin for luxury homes and amenities, Henderson for family-friendly communities, Green Valley for established neighborhoods, and Downtown for urban living. Each area offers different benefits - contact Las Vegas Nevada Home Sales for personalized neighborhood recommendations based on your lifestyle and budget.',
+      'Popular neighborhoods include Summerlin for luxury homes and amenities, Henderson for communities, Green Valley for older neighborhoods, and Downtown for urban living. Each area offers different benefits - contact Las Vegas Nevada Home Sales for personalized neighborhood recommendations based on your lifestyle and budget.',
   },
 
   // Selling FAQs

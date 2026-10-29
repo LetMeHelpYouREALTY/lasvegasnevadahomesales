@@ -96,11 +96,11 @@ export const seoConfig = {
     },
 
     henderson: {
-      title: 'Henderson NV Homes for Sale | Family-Friendly Real Estate',
+      title: 'Henderson NV Homes for Sale | Real Estate',
       description:
-        "Find family-friendly homes in Henderson, Nevada. Browse properties in one of America's safest cities with excellent schools and amenities.",
+        "Find homes in Henderson, Nevada. Browse properties in Nevada's second-largest city, with nearby schools, parks, and amenities.",
       keywords:
-        'Henderson homes for sale, Henderson real estate, Nevada family homes, Henderson schools, safe neighborhoods',
+        'Henderson homes for sale, Henderson real estate, Nevada homes, Henderson schools, Henderson parks',
       ogImage: '/images/og-henderson.jpg',
       canonical: '/neighborhoods/henderson',
     },
