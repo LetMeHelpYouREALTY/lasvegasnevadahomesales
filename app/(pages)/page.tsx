@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import FeaturedListing from '@/components/sections/FeaturedListing';
 import { Button } from '../../components/ui/button';
 import { MarketDataWidget } from '../../components/MarketData/MarketDataWidget';
 import { OptimizedImage } from '../../components/OptimizedImage/OptimizedImage';
@@ -103,6 +104,12 @@ export default function LasVegasMarketOverview() {
           </div>
         </div>
       </section>
+
+      <FeaturedListing
+        phone={"(702) 500-1981"}
+        phoneHref={"tel:+17025001981"}
+        siteHost="lasvegasnevadahomesales.com"
+      />
 
       {/* Market Stats Section */}
       <section className="bg-white py-16">
