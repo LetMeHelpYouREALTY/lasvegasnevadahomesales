@@ -119,7 +119,7 @@ export default function HendersonVsSummerlinPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✓</span>
-                    Family-friendly atmosphere
+                    Parks and community amenities
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✓</span>
@@ -212,7 +212,7 @@ export default function HendersonVsSummerlinPage() {
                 <h4 className="text-xl font-semibold text-blue-900 mb-4">Choose Henderson if:</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li>• You're a first-time homebuyer</li>
-                  <li>• You have a growing family</li>
+                  <li>• You need more bedrooms</li>
                   <li>• You work in Henderson or nearby</li>
                   <li>• You prefer a quieter, suburban feel</li>
                   <li>• You want more house for your money</li>

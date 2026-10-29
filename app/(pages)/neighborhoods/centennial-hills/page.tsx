@@ -5,12 +5,12 @@ import { RealScoutYourListings } from '../../../../components/RealScout/RealScou
 export const metadata: Metadata = {
   title: 'Centennial Hills Las Vegas Real Estate | New Homes for Sale | Las Vegas Nevada Home Sales',
   description:
-    'Find new homes for sale in Centennial Hills Las Vegas. Growing master-planned community with modern amenities, great schools, and family-friendly atmosphere. Expert real estate guidance from Las Vegas Nevada Home Sales.',
+    'Find new homes for sale in Centennial Hills Las Vegas. Growing master-planned community with modern amenities, nearby schools, and parks and community amenities. Expert real estate guidance from Las Vegas Nevada Home Sales.',
   keywords:
-    'Centennial Hills Las Vegas real estate, Centennial Hills homes for sale, new homes Las Vegas, master-planned community, Las Vegas Nevada Home Sales, North Las Vegas homes, family-friendly neighborhood',
+    'Centennial Hills Las Vegas real estate, Centennial Hills homes for sale, new homes Las Vegas, master-planned community, Las Vegas Nevada Home Sales, North Las Vegas homes, neighborhood',
   openGraph: {
     title: 'Centennial Hills Las Vegas Real Estate | New Homes for Sale',
-    description: 'Find new homes for sale in Centennial Hills Las Vegas. Growing master-planned community with modern amenities, great schools, and family-friendly atmosphere.',
+    description: 'Find new homes for sale in Centennial Hills Las Vegas. Growing master-planned community with modern amenities, nearby public schools, and parks.',
     url: 'https://lasvegasnevadahomesales.com/neighborhoods/centennial-hills',
     siteName: 'Las Vegas Nevada Home Sales',
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Centennial Hills Las Vegas Real Estate | New Homes for Sale',
-    description: 'Find new homes for sale in Centennial Hills Las Vegas. Growing master-planned community with modern amenities, great schools, and family-friendly atmosphere.',
+    description: 'Find new homes for sale in Centennial Hills Las Vegas. Growing master-planned community with modern amenities, nearby public schools, and parks.',
     images: ['https://lasvegasnevadahomesales.com/images/og-centennial-hills.jpg'],
   },
 };
@@ -44,7 +44,7 @@ export default function CentennialHillsPage() {
             </h1>
             <p className="mb-8 text-xl text-emerald-100 md:text-2xl">
               Discover the newest master-planned community in Las Vegas with modern homes, 
-              excellent amenities, and a family-friendly atmosphere.
+              excellent amenities, and an atmosphere.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button
@@ -97,10 +97,10 @@ export default function CentennialHillsPage() {
                 </div>
                 <div className="rounded-lg bg-emerald-50 p-6">
                   <h3 className="mb-2 text-xl font-semibold text-emerald-900">
-                    Family-Friendly
+                    Parks Nearby
                   </h3>
                   <p className="text-emerald-700">
-                    Safe streets, parks, and excellent schools for growing families
+                    Parks, quiet streets, and nearby schools
                   </p>
                 </div>
               </div>
@@ -127,9 +127,9 @@ export default function CentennialHillsPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg bg-white p-6 shadow-lg">
               <div className="mb-4 text-4xl text-emerald-600">🏫</div>
-              <h3 className="mb-2 text-xl font-semibold text-gray-900">Top-Rated Schools</h3>
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">Nearby Public Schools</h3>
               <p className="text-gray-700">
-                Excellent schools including Centennial Hills Elementary and Arbor View High School
+                Nearby public schools including Centennial Hills Elementary and Arbor View High School
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-lg">

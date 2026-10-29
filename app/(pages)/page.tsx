@@ -184,7 +184,7 @@ export default function LasVegasMarketOverview() {
               <div className="relative h-48 overflow-hidden">
                 <OptimizedImage
                   src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Henderson family-friendly neighborhood"
+                  alt="Henderson neighborhood"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -194,7 +194,7 @@ export default function LasVegasMarketOverview() {
               <CardHeader>
                 <CardTitle className="text-xl">Henderson</CardTitle>
                 <CardDescription>
-                  Family-friendly city with excellent schools and parks
+                  City with nearby schools and parks
                 </CardDescription>
               </CardHeader>
               <CardContent>

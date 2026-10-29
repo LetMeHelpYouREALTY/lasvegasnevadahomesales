@@ -127,13 +127,13 @@ export default function InvestmentPropertiesGuidePage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-xl">Henderson</CardTitle>
-                  <CardDescription>Family-friendly with strong rental demand</CardDescription>
+                  <CardDescription>With strong rental demand</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-gray-700 mb-4">
                     <li>• Average rental yield: 6.8%</li>
                     <li>• Median home price: $450,000</li>
-                    <li>• Strong school district</li>
+                    <li>• School district</li>
                     <li>• Low vacancy rates</li>
                     <li>• Growing job market</li>
                   </ul>

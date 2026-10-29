@@ -66,7 +66,7 @@ export default function LasVegasNeighborhoodInsightsPage() {
               <ul className="space-y-2 text-gray-700 mb-6">
                 <li>• Luxury homes $600K-$2M+</li>
                 <li>• Golf courses & parks</li>
-                <li>• Top-rated schools</li>
+                <li>• Nearby public schools</li>
                 <li>• Shopping & dining</li>
               </ul>
               <Button asChild className="w-full">
@@ -80,13 +80,13 @@ export default function LasVegasNeighborhoodInsightsPage() {
             <CardHeader>
               <CardTitle className="text-xl">Henderson</CardTitle>
               <CardDescription>
-                Family-friendly city with excellent schools and parks
+                City with nearby schools and parks
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-gray-700 mb-6">
                 <li>• Family homes $400K-$800K</li>
-                <li>• Excellent schools</li>
+                <li>• Nearby public schools</li>
                 <li>• Parks & recreation</li>
                 <li>• Growing job market</li>
               </ul>
@@ -150,7 +150,7 @@ export default function LasVegasNeighborhoodInsightsPage() {
               <ul className="space-y-2 text-gray-700 mb-6">
                 <li>• New construction $400K-$700K</li>
                 <li>• Modern amenities</li>
-                <li>• Family-friendly</li>
+                <li>• Parks nearby</li>
                 <li>• Red Rock access</li>
               </ul>
               <Button asChild className="w-full">
