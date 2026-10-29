@@ -15,7 +15,6 @@ import {
   websiteSchema,
 } from '../components/SEO/StructuredData';
 import { metadata as siteMetadata } from './metadata';
-import WidgetTracker from './widget-tracker'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -87,7 +86,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           mode={process.env.NODE_ENV === 'production' ? 'production' : 'development'}
           debug={process.env.NODE_ENV === 'development'}
         />
-        <WidgetTracker />
       </body>
     </html>
   );
