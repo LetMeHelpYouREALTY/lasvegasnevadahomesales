@@ -1,15 +1,28 @@
 // RealScout Configuration
+
+// Widgets need the encoded id (base64 of "Agent-<n>"). A bare numeric id or the old
+// 'demo-agent-id' placeholder renders nothing, so fall back to Dr. Jan's real id.
+const DEFAULT_REALSCOUT_AGENT_ID = 'QWdlbnQtMjI1MDUw';
+
+function normalizeRealScoutAgentId(raw: string | undefined): string {
+  const value = raw?.trim();
+  if (!value || value === 'demo-agent-id') return DEFAULT_REALSCOUT_AGENT_ID;
+  if (/^\d+$/.test(value)) return btoa(`Agent-${value}`);
+  return value;
+}
+
+const agentEncodedId = normalizeRealScoutAgentId(process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID);
+
 export const realScoutConfig = {
-  // Agent Encoded ID - Replace with your actual RealScout agent ID
-  agentEncodedId: process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'demo-agent-id',
+  agentEncodedId,
 
   // Widget Configuration
   widgets: {
     homeValue: {
-      agentEncodedId: process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'demo-agent-id',
+      agentEncodedId,
     },
     officeListings: {
-      agentEncodedId: process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'demo-agent-id',
+      agentEncodedId,
       sortOrder: 'price-desc',
       listingStatus: 'active',
       propertyTypes: 'single-family,condo,townhouse',
@@ -17,13 +30,13 @@ export const realScoutConfig = {
       priceMax: '2000000',
     },
     yourListings: {
-      agentEncodedId: process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'demo-agent-id',
+      agentEncodedId,
     },
     simpleSearch: {
-      agentEncodedId: process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'demo-agent-id',
+      agentEncodedId,
     },
     advancedSearch: {
-      agentEncodedId: process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID || 'demo-agent-id',
+      agentEncodedId,
     },
   },
 
