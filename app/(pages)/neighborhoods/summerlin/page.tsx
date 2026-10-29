@@ -9,12 +9,12 @@ import { NeighborhoodPageSchema } from '../../../../components/SEO/PageSchemas';
 export const metadata: Metadata = {
   title: 'Summerlin Las Vegas Real Estate | Luxury Homes for Sale | Las Vegas Nevada Home Sales',
   description:
-    "Find luxury homes for sale in Summerlin Las Vegas. Premier master-planned community with golf courses, top schools, and shopping. Expert real estate guidance from Las Vegas Nevada Home Sales.",
+    "Find luxury homes for sale in Summerlin Las Vegas. Premier master-planned community with golf courses, nearby public schools, and shopping. Expert real estate guidance from Las Vegas Nevada Home Sales.",
   keywords:
     'Summerlin Las Vegas real estate, Summerlin homes for sale, luxury homes Summerlin, Summerlin golf course homes, Las Vegas Nevada Home Sales, Summerlin properties, master-planned community Las Vegas',
   openGraph: {
     title: 'Summerlin Las Vegas Real Estate | Luxury Homes for Sale',
-    description: "Find luxury homes for sale in Summerlin Las Vegas. Premier master-planned community with golf courses, top schools, and shopping.",
+    description: "Find luxury homes for sale in Summerlin Las Vegas. Premier master-planned community with golf courses, nearby public schools, and shopping.",
     url: 'https://lasvegasnevadahomesales.com/neighborhoods/summerlin',
     siteName: 'Las Vegas Nevada Home Sales',
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Summerlin Las Vegas Real Estate | Luxury Homes for Sale',
-    description: "Find luxury homes for sale in Summerlin Las Vegas. Premier master-planned community with golf courses, top schools, and shopping.",
+    description: "Find luxury homes for sale in Summerlin Las Vegas. Premier master-planned community with golf courses, nearby public schools, and shopping.",
     images: ['https://lasvegasnevadahomesales.com/images/og-summerlin.jpg'],
   },
 };
@@ -48,7 +48,7 @@ export default function SummerlinPage() {
       />
       <NeighborhoodPageSchema
         neighborhood="Summerlin"
-        description="Premier master-planned community in Las Vegas with luxury homes, golf courses, top schools, and world-class amenities."
+        description="Premier master-planned community in Las Vegas with luxury homes, golf courses, nearby public schools, and world-class amenities."
         averagePrice="$750,000"
         population="100,000+"
         medianAge="42"
@@ -140,7 +140,7 @@ export default function SummerlinPage() {
               </p>
               <p className="mb-6 text-lg text-gray-600">
                 Developed by The Howard Hughes Corporation, Summerlin features meticulously planned
-                neighborhoods, extensive parks and trails, top-rated schools, and convenient access
+                neighborhoods, extensive parks and trails, nearby public schools, and convenient access
                 to shopping, dining, and entertainment.
               </p>
               <div className="space-y-4">
@@ -158,7 +158,7 @@ export default function SummerlinPage() {
                 </div>
                 <div className="flex items-center">
                   <div className="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
-                  <span className="text-gray-700">Family-friendly environment</span>
+                  <span className="text-gray-700">Environment</span>
                 </div>
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function SummerlinPage() {
             </div>
             <div className="rounded-lg bg-gray-50 p-6">
               <div className="mb-4 text-3xl text-orange-600">🎓</div>
-              <h3 className="mb-2 text-xl font-bold text-gray-900">Top Schools</h3>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">Nearby Public Schools</h3>
               <p className="text-gray-600">
                 Award-winning public and private schools serving all grade levels
               </p>

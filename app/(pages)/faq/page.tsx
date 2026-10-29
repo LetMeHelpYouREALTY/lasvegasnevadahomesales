@@ -46,7 +46,7 @@ const comprehensiveFAQs = [
   {
     question: 'What neighborhoods should I consider when buying in Las Vegas?',
     answer:
-      'Popular neighborhoods include Summerlin for luxury homes and amenities, Henderson for family-friendly communities, Green Valley for established neighborhoods, and Downtown for urban living. Each area offers different benefits - contact Las Vegas Nevada Home Sales for personalized neighborhood recommendations based on your lifestyle and budget.',
+      'Popular neighborhoods include Summerlin for luxury homes and amenities, Henderson for communities, Green Valley for older neighborhoods, and Downtown for urban living. Each area offers different benefits - contact Las Vegas Nevada Home Sales for personalized neighborhood recommendations based on your lifestyle and budget.',
   },
 
   // Selling FAQs

@@ -93,7 +93,7 @@ export function Navigation() {
         {
           href: '/neighborhoods/henderson',
           label: 'Henderson',
-          description: 'Family-friendly city',
+          description: 'City',
         },
         {
           href: '/neighborhoods/green-valley',

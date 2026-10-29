@@ -7,12 +7,12 @@ import { NeighborhoodPageSchema } from '../../../../components/SEO/PageSchemas';
 export const metadata: Metadata = {
   title: 'Henderson Las Vegas Real Estate | Family Homes for Sale | Las Vegas Nevada Home Sales',
   description:
-    "Find family-friendly homes for sale in Henderson Las Vegas. Excellent schools, parks, and affordable housing in this growing Las Vegas suburb. Expert real estate guidance from Las Vegas Nevada Home Sales.",
+    "Find homes for sale in Henderson Las Vegas. Nearby schools, parks, and affordable housing in this growing Las Vegas suburb. Expert real estate guidance from Las Vegas Nevada Home Sales.",
   keywords:
     'Henderson Las Vegas real estate, Henderson homes for sale, family homes Henderson, Henderson schools, Las Vegas Nevada Home Sales, Henderson properties, affordable homes Las Vegas',
   openGraph: {
     title: 'Henderson Las Vegas Real Estate | Family Homes for Sale',
-    description: "Find family-friendly homes for sale in Henderson Las Vegas. Excellent schools, parks, and affordable housing in this growing Las Vegas suburb.",
+    description: "Find homes for sale in Henderson Las Vegas. Parks, nearby public schools, and affordable housing in this growing Las Vegas suburb.",
     url: 'https://lasvegasnevadahomesales.com/neighborhoods/henderson',
     siteName: 'Las Vegas Nevada Home Sales',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Henderson Las Vegas Real Estate | Family Homes for Sale',
-    description: "Find family-friendly homes for sale in Henderson Las Vegas. Excellent schools, parks, and affordable housing in this growing Las Vegas suburb.",
+    description: "Find homes for sale in Henderson Las Vegas. Parks, nearby public schools, and affordable housing in this growing Las Vegas suburb.",
     images: ['https://lasvegasnevadahomesales.com/images/og-henderson.jpg'],
   },
 };
@@ -45,7 +45,7 @@ export default function HendersonPage() {
               Henderson
             </h1>
             <p className="mb-8 text-xl font-light text-blue-100 md:text-2xl">
-              Las Vegas' Premier Family-Friendly City
+              Las Vegas' Premier City
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
               <Button
@@ -98,12 +98,12 @@ export default function HendersonPage() {
               <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">About Henderson</h2>
               <p className="mb-6 text-lg text-gray-600">
                 Henderson is Nevada's second-largest city and one of the fastest-growing communities
-                in the Las Vegas Valley. Known for its family-friendly atmosphere, excellent
+                in the Las Vegas Valley. Known for its parks and community amenities, excellent
                 schools, and abundant parks and recreation opportunities, Henderson offers a
                 suburban lifestyle with easy access to all that Las Vegas has to offer.
               </p>
               <p className="mb-6 text-lg text-gray-600">
-                The city consistently ranks as one of the safest cities in America and has been
+                The city publishes its crime data online through Henderson Police and has been
                 recognized for its quality of life, making it an ideal place for families,
                 professionals, and retirees alike.
               </p>
@@ -114,7 +114,7 @@ export default function HendersonPage() {
                 </div>
                 <div className="flex items-center">
                   <div className="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
-                  <span className="text-gray-700">Consistently ranked among safest cities</span>
+                  <span className="text-gray-700">Crime data published online by Henderson Police</span>
                 </div>
                 <div className="flex items-center">
                   <div className="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
@@ -140,7 +140,7 @@ export default function HendersonPage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg bg-gray-50 p-6">
               <div className="mb-4 text-3xl text-blue-600">🎓</div>
-              <h3 className="mb-2 text-xl font-bold text-gray-900">Top-Rated Schools</h3>
+              <h3 className="mb-2 text-xl font-bold text-gray-900">Nearby Public Schools</h3>
               <p className="text-gray-600">
                 Clark County School District with A+ rated schools and excellent academic programs
               </p>
@@ -266,7 +266,7 @@ export default function HendersonPage() {
             <div className="rounded-lg bg-gray-50 p-6">
               <h3 className="mb-3 text-xl font-bold text-gray-900">Green Valley</h3>
               <p className="mb-4 text-gray-600">
-                Established neighborhood with mature trees, excellent schools, and convenient
+                Older neighborhood with mature trees, nearby public schools, and convenient
                 shopping
               </p>
               <div className="text-sm text-gray-500">
@@ -297,7 +297,7 @@ export default function HendersonPage() {
             <div className="rounded-lg bg-gray-50 p-6">
               <h3 className="mb-3 text-xl font-bold text-gray-900">Inspirada</h3>
               <p className="mb-4 text-gray-600">
-                Newer master-planned community with modern homes and family-friendly amenities
+                Newer master-planned community with modern homes and amenities
               </p>
               <div className="text-sm text-gray-500">
                 <p>Median Price: $520,000</p>
@@ -307,7 +307,7 @@ export default function HendersonPage() {
             <div className="rounded-lg bg-gray-50 p-6">
               <h3 className="mb-3 text-xl font-bold text-gray-900">MacDonald Ranch</h3>
               <p className="mb-4 text-gray-600">
-                Established community with golf course, parks, and diverse housing options
+                Older community with golf course, parks, and diverse housing options
               </p>
               <div className="text-sm text-gray-500">
                 <p>Median Price: $480,000</p>
@@ -351,7 +351,7 @@ export default function HendersonPage() {
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ready to Call Henderson Home?</h2>
           <p className="mb-8 text-xl text-blue-100">
-            Our Henderson experts can help you find the perfect home in this family-friendly city
+            Our Henderson experts can help you find the perfect home in this city
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <Button

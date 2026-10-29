@@ -81,7 +81,7 @@ export function RealScoutSummerlinShowcase({
         'Private Backyard',
         '2-Car Garage',
         'Energy Efficient',
-        'Great Schools',
+        'Nearby public schools',
       ],
       images: {
         hero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop',
