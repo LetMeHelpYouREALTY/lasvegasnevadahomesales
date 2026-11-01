@@ -3,6 +3,9 @@ import { Button } from '../../../../components/Button/Button';
 import { RealScoutYourListings } from '../../../../components/RealScout/RealScoutYourListings';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/neighborhoods/centennial-hills',
+  },
   title: 'Centennial Hills Las Vegas Real Estate | New Homes for Sale | Las Vegas Nevada Home Sales',
   description:
     'Find new homes for sale in Centennial Hills Las Vegas. Growing master-planned community with modern amenities, nearby schools, and parks and community amenities. Expert real estate guidance from Las Vegas Nevada Home Sales.',

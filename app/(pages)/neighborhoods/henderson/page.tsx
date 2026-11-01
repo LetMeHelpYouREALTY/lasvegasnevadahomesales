@@ -5,6 +5,9 @@ import { SEOHead } from '../../../../components/SEO/SEOHead';
 import { NeighborhoodPageSchema } from '../../../../components/SEO/PageSchemas';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/neighborhoods/henderson',
+  },
   title: 'Henderson Las Vegas Real Estate | Family Homes for Sale | Las Vegas Nevada Home Sales',
   description:
     "Find homes for sale in Henderson Las Vegas. Nearby schools, parks, and affordable housing in this growing Las Vegas suburb. Expert real estate guidance from Las Vegas Nevada Home Sales.",

@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { Button } from '../../../components/Button/Button';
 import { SEOHead } from '../../../components/SEO/SEOHead';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/testimonials',
+  },
+};
 
 // Template testimonials, the 4.9/5 badge and the review schema were removed on Oct 29, 2026.
 // Named client quotes stay off this page until Dr. Jan confirms each one is a real client.

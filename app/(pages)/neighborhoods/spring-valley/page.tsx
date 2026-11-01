@@ -3,6 +3,9 @@ import { Button } from '../../../../components/Button/Button';
 import { RealScoutYourListings } from '../../../../components/RealScout/RealScoutYourListings';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/neighborhoods/spring-valley',
+  },
   title: 'Spring Valley Las Vegas Real Estate | Central Location Homes for Sale | Las Vegas Nevada Home Sales',
   description:
     'Find homes for sale in Spring Valley Las Vegas. Central location with convenient access to everything, nearby public schools, and diverse housing options. Expert real estate guidance from Las Vegas Nevada Home Sales.',

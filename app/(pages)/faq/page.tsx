@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { useId } from 'react';
 import { Button } from '../../../components/Button/Button';
 import { FAQSchema } from '../../../components/SEO/FAQSchema';
@@ -7,6 +8,12 @@ import {
   ReviewSchema,
 } from '../../../components/SEO/ReviewSchema';
 import { SEOHead } from '../../../components/SEO/SEOHead';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/faq',
+  },
+};
 
 // Comprehensive FAQ data
 const comprehensiveFAQs = [

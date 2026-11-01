@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { seoConfig } from '../config/seo-config';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.lasvegasnevadahomesales.com'),
+  metadataBase: new URL('https://lasvegasnevadahomesales.com'),
   title: {
     default: seoConfig.pages.home.title,
     template: `%s | ${seoConfig.site.name}`,
@@ -16,9 +16,6 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
-  },
-  alternates: {
-    canonical: seoConfig.site.url,
   },
   openGraph: {
     type: 'website',

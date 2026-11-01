@@ -3,6 +3,9 @@ import { OptimizedImage } from '../../../components/OptimizedImage/OptimizedImag
 import { SEOHead } from '../../../components/SEO/SEOHead';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/market-intelligence',
+  },
   title: 'Las Vegas Real Estate Market Intelligence | Current Trends & Forecasts',
   description:
     'Stay informed with the latest Las Vegas real estate market trends, home price forecasts, mortgage rate projections, and expert insights for 2025.',

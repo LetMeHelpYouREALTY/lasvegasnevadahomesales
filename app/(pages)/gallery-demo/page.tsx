@@ -6,6 +6,9 @@ import {
 import { SEOHead } from '../../../components/SEO/SEOHead';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/gallery-demo',
+  },
   title: 'CSS Image Gallery Demo | RealScout Integration',
   description:
     'Explore our beautiful CSS image gallery with RealScout widget integration. Multiple gallery types including grid, masonry, and carousel layouts.',

@@ -3,6 +3,9 @@ import { Button } from '../../../../components/Button/Button';
 import { RealScoutYourListings } from '../../../../components/RealScout/RealScoutYourListings';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/neighborhoods/downtown',
+  },
   title: 'Downtown Las Vegas Real Estate | Urban Homes for Sale | Las Vegas Nevada Home Sales',
   description:
     'Find urban homes for sale in Downtown Las Vegas. Heart of the city with entertainment, cultural attractions, and nightlife. Expert real estate guidance from Las Vegas Nevada Home Sales.',

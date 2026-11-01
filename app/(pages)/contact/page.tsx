@@ -14,6 +14,9 @@ import { SEOHead } from '../../../components/SEO/SEOHead';
 import { ContactPageSchema } from '../../../components/SEO/PageSchemas';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/contact',
+  },
   title: 'Contact Las Vegas Real Estate Experts | Get in Touch',
   description:
     'Contact our Las Vegas real estate experts for personalized assistance. Get help buying, selling, or investing in Las Vegas properties. Call, email, or fill out our contact form.',

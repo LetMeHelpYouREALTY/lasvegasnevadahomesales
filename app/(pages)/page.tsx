@@ -21,6 +21,9 @@ import { LatestBlogPosts } from '../../components/Blog/LatestBlogPosts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com',
+  },
   title: 'Las Vegas Real Estate Market | Homes for Sale in Las Vegas, NV',
   description:
     'Discover the latest Las Vegas real estate market trends, homes for sale, and expert insights. Find your dream home in Las Vegas, Henderson, Summerlin, and surrounding areas.',

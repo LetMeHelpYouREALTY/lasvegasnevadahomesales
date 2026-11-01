@@ -110,48 +110,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     
-    // Las Vegas Homes subdirectory
-    {
-      url: `${baseUrl}/las-vegas-homes/las-vegas-neighborhood-insights`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/las-vegas-homes/fashion`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/las-vegas-homes/sports`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    
-    // Services
-    {
-      url: `${baseUrl}/services/investment-opportunities`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/services/market-trends`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    
-    // Las Vegas Homes - Travel
-    {
-      url: `${baseUrl}/las-vegas-homes/travel`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    
     // Blog posts
     {
       url: `${baseUrl}/blog/henderson-vs-summerlin-neighborhood-comparison`,

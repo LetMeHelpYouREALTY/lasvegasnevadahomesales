@@ -7,6 +7,9 @@ import { SEOHead } from '../../../../components/SEO/SEOHead';
 import { NeighborhoodPageSchema } from '../../../../components/SEO/PageSchemas';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/neighborhoods/summerlin',
+  },
   title: 'Summerlin Las Vegas Real Estate | Luxury Homes for Sale | Las Vegas Nevada Home Sales',
   description:
     "Find luxury homes for sale in Summerlin Las Vegas. Premier master-planned community with golf courses, nearby public schools, and shopping. Expert real estate guidance from Las Vegas Nevada Home Sales.",

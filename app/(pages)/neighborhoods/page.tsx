@@ -3,6 +3,9 @@ import { Button } from '../../../components/Button/Button';
 import { RealScoutYourListings } from '../../../components/RealScout/RealScoutYourListings';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/neighborhoods',
+  },
   title: 'Las Vegas Neighborhoods | Complete Guide to Las Vegas Communities',
   description:
     'Explore Las Vegas neighborhoods including Summerlin, Henderson, Green Valley, Downtown, and more. Find the perfect community for your lifestyle and budget.',

@@ -5,6 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../..
 import { Button } from '../../../../components/ui/button';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/blog/first-time-homebuyer-guide-las-vegas',
+  },
   title: 'First-Time Homebuyer Guide Las Vegas: Complete 2025 Guide | Las Vegas Nevada Home Sales',
   description: 'Complete first-time homebuyer guide for Las Vegas. Learn about down payment assistance, loan programs, neighborhoods, and step-by-step process to buy your first home in Las Vegas.',
   keywords: 'first-time homebuyer Las Vegas, Las Vegas home buying guide, first-time buyer programs, Las Vegas Nevada Home Sales, home buying process, down payment assistance Las Vegas',

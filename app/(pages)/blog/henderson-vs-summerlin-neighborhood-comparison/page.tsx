@@ -5,6 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../..
 import { Button } from '../../../../components/ui/button';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/blog/henderson-vs-summerlin-neighborhood-comparison',
+  },
   title: 'Henderson vs Summerlin: Which Las Vegas Neighborhood is Right for You? | Las Vegas Nevada Home Sales',
   description: 'Compare Henderson vs Summerlin neighborhoods in Las Vegas. Expert analysis of schools, amenities, home prices, and lifestyle factors to help you choose the perfect community.',
   keywords: 'Henderson vs Summerlin, Las Vegas neighborhoods comparison, Henderson real estate, Summerlin real estate, Las Vegas Nevada Home Sales, best Las Vegas neighborhoods',

@@ -3,6 +3,9 @@ import { Button } from '../../../../components/Button/Button';
 import { RealScoutYourListings } from '../../../../components/RealScout/RealScoutYourListings';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/properties/search',
+  },
   title: 'Advanced Property Search | Las Vegas Real Estate',
   description:
     'Advanced property search with comprehensive filters. Find your perfect Las Vegas home with detailed search options for price, location, features, and more.',

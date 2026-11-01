@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { useId } from 'react';
 import { Button } from '../../../components/Button/Button';
@@ -9,6 +10,12 @@ import {
 } from '../../../components/SEO/ReviewSchema';
 import { SEOHead } from '../../../components/SEO/SEOHead';
 import { LatestBlogPosts } from '../../../components/Blog/LatestBlogPosts';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/blog',
+  },
+};
 
 // FAQ data for blog
 const blogFAQs = [
@@ -52,7 +59,7 @@ const blogPosts = [
     readTime: '5 min read',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop',
     slug: '2024-las-vegas-real-estate-market-predictions',
-    featured: true,
+    featured: false,
   },
   {
     id: 2,
@@ -91,7 +98,7 @@ const blogPosts = [
     readTime: '7 min read',
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=400&fit=crop',
     slug: 'henderson-vs-summerlin-neighborhood-comparison',
-    featured: false,
+    featured: true,
   },
   {
     id: 5,

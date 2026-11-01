@@ -14,6 +14,9 @@ import {
 import { SEOHead } from '../../../components/SEO/SEOHead';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/strategies',
+  },
   title: 'Real Estate Strategies & Techniques | Las Vegas Real Estate',
   description:
     'Discover proven real estate strategies and techniques for buying and selling homes in Las Vegas. Expert tips for negotiation, market timing, and investment success.',

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Button } from '../../../components/Button/Button';
 import { FAQSchema } from '../../../components/SEO/FAQSchema';
 import { HowToSchema } from '../../../components/SEO/HowToSchema';
@@ -7,6 +8,12 @@ import {
   serviceReviews,
 } from '../../../components/SEO/ReviewSchema';
 import { SEOHead } from '../../../components/SEO/SEOHead';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/market-reports',
+  },
+};
 
 // FAQ data for market reports
 const marketReportsFAQs = [

@@ -5,6 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../..
 import { Button } from '../../../../components/ui/button';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/blog/investment-properties-las-vegas-guide',
+  },
   title: 'Investment Properties Las Vegas Guide 2025: Best Areas & Strategies | Las Vegas Nevada Home Sales',
   description: 'Complete guide to Las Vegas real estate investment properties. Learn about the best areas, rental yields, market trends, and investment strategies for Las Vegas rental properties.',
   keywords: 'Las Vegas investment properties, Las Vegas rental properties, real estate investment Las Vegas, Las Vegas Nevada Home Sales, rental property investment, Las Vegas market trends',

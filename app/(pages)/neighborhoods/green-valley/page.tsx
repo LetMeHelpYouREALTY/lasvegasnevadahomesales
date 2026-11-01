@@ -3,6 +3,9 @@ import { Button } from '../../../../components/Button/Button';
 import { RealScoutYourListings } from '../../../../components/RealScout/RealScoutYourListings';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://lasvegasnevadahomesales.com/neighborhoods/green-valley',
+  },
   title: 'Green Valley Las Vegas Real Estate | Affordable Homes for Sale | Las Vegas Nevada Home Sales',
   description:
     'Find affordable homes for sale in Green Valley Las Vegas. Great amenities, convenient location, and growing community. Expert real estate guidance from Las Vegas Nevada Home Sales.',
