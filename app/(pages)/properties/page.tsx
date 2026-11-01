@@ -220,7 +220,7 @@ export default function PropertiesPage() {
                     <span>{property.baths} baths</span>
                     <span>{property.sqft.toLocaleString()} sqft</span>
                   </div>
-                  <Button href={`/properties/${property.id}`} className="w-full">
+                  <Button href="/properties/search" className="w-full">
                     View Details
                   </Button>
                 </div>

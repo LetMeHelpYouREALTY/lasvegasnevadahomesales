@@ -211,7 +211,7 @@ export function RealScoutSummerlinShowcase({
               {/* Action Buttons */}
               <div className="flex space-x-3">
                 <Button
-                  href={`/properties/${property.id}`}
+                  href="/properties/search"
                   className="flex-1 bg-green-600 text-white hover:bg-green-700"
                 >
                   View Details

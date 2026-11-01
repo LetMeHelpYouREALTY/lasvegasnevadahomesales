@@ -125,7 +125,7 @@ export function FeaturedProperties({
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{property.neighborhood}</span>
                   <Button
-                    href={`/properties/${property.id}`}
+                    href="/properties/search"
                     className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-semibold transition-colors duration-200"
                   >
                     View Details
