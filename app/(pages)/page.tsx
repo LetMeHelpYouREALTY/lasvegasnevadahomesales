@@ -17,7 +17,6 @@ import {
 } from '../../components/SEO/ReviewSchema';
 import { SEOHead } from '../../components/SEO/SEOHead';
 import { HomepageSchema, WebsiteSchema } from '../../components/SEO/PageSchemas';
-import { LatestBlogPosts } from '../../components/Blog/LatestBlogPosts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 
 export const metadata: Metadata = {
@@ -349,25 +348,6 @@ export default function LasVegasMarketOverview() {
         </div>
       </section>
 
-      {/* Latest Blog Posts Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="mb-6 text-3xl font-bold text-[#0A2540] md:text-4xl">
-              Latest Real Estate Insights
-            </h2>
-            <p className="text-lg text-gray-600">
-              Stay informed with the latest market trends, buying tips, and real estate news
-            </p>
-          </div>
-          <LatestBlogPosts limit={3} showFeatured={true} />
-          <div className="text-center mt-8">
-            <Button asChild className="bg-[#0A2540] text-white hover:bg-[#3A8DDE]">
-              <Link href="/blog">View All Articles</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Home Value Section */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">

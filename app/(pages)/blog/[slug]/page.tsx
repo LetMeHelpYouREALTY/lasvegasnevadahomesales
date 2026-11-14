@@ -20,31 +20,10 @@ interface BlogPost {
   externalUrl: string;
 }
 
-async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  try {
-    const baseUrl = process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}` 
-      : 'http://localhost:3000';
-    
-    const response = await fetch(`${baseUrl}/api/rss-feed`, {
-      next: { revalidate: 3600 }, // Revalidate every hour
-    });
-    
-    if (!response.ok) {
-      return null;
-    }
-    
-    const data = await response.json() as { success: boolean; posts?: BlogPost[] };
-    
-    if (data.success && data.posts) {
-      return data.posts.find((post: BlogPost) => post.slug === slug) || null;
-    }
-    
-    return null;
-  } catch (error) {
-    console.error('Error fetching blog post:', error);
-    return null;
-  }
+// The Keeping Current Matters articles were removed on 2026-11-14: their terms
+// allow them on a website only during a paid membership, which has ended.
+async function getBlogPost(_slug: string): Promise<BlogPost | null> {
+  return null;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

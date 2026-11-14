@@ -9,7 +9,6 @@ import {
   serviceReviews,
 } from '../../../components/SEO/ReviewSchema';
 import { SEOHead } from '../../../components/SEO/SEOHead';
-import { LatestBlogPosts } from '../../../components/Blog/LatestBlogPosts';
 
 export const metadata: Metadata = {
   alternates: {
@@ -257,7 +256,9 @@ export default function BlogPage() {
           <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
             Latest Articles
           </h2>
-          <LatestBlogPosts limit={12} />
+          <p className="text-center text-lg text-gray-600">
+            New local market updates are coming soon.
+          </p>
         </div>
       </section>
 
