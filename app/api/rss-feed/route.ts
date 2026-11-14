@@ -115,7 +115,7 @@ function categorizePost(title: string, content: string): string {
 
 export async function GET(request: NextRequest) {
   try {
-    const feedUrl = 'https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18';
+    const feedUrl = 'https://www.simplifyingthemarket.com/en/feed/';
     
     // Fetch the RSS feed
     const response = await fetch(feedUrl, {
