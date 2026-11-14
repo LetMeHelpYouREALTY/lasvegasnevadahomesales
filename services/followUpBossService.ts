@@ -119,8 +119,7 @@ class FollowUpBossService {
         personId,
         type: taskData.type || 'Follow Up',
         dueDate: taskData.dueDate || this.getDefaultDueDate(),
-        note: taskData.note || 'New website lead - follow up required',
-        assignedTo: taskData.assignedTo,
+        name: taskData.name || 'New website lead - follow up',
       };
 
       const response = await fetch(`${this.baseUrl}${crmConfig.followUpBoss.endpoints.tasks}`, {
@@ -167,55 +166,88 @@ class FollowUpBossService {
     }
   }
 
-  // Process a complete lead submission
+  // Process a complete lead submission.
+  // FUB's supported way to add a website lead is one POST /events call with the
+  // person inside it: FUB de-duplicates by email/phone, assigns the agent and
+  // runs action plans and automations. The old flow searched with an unknown
+  // "emails" filter (which matched an unrelated contact), then sent an event
+  // with a bare personId and a task with a "note" field; FUB rejected both.
   async processLead(
     leadData: LeadData
   ): Promise<{ success: boolean; personId?: string; error?: string }> {
     try {
-      // First, check if person already exists
-      const searchResult = await this.findPersonByEmail(leadData.email);
+      const source =
+        crmConfig.leadSources[leadData.source as keyof typeof crmConfig.leadSources] ||
+        leadData.source ||
+        'Website';
+      const budget = leadData.budget
+        ? crmConfig.budgetRanges[leadData.budget as keyof typeof crmConfig.budgetRanges] ||
+          leadData.budget
+        : undefined;
+      const timeline = leadData.timeline
+        ? crmConfig.timelines[leadData.timeline as keyof typeof crmConfig.timelines] ||
+          leadData.timeline
+        : undefined;
+      const description = [
+        budget ? `Budget: ${budget}` : null,
+        timeline ? `Timeline: ${timeline}` : null,
+        leadData.pageUrl ? `Page: ${leadData.pageUrl}` : null,
+      ]
+        .filter(Boolean)
+        .join('\n');
 
-      let personId: string;
+      const response = await fetch(`${this.baseUrl}${crmConfig.followUpBoss.endpoints.events}`, {
+        method: 'POST',
+        headers: this.headers,
+        body: JSON.stringify({
+          source: 'lasvegasnevadahomesales.com',
+          system: 'lasvegasnevadahomesales.com',
+          type: 'General Inquiry',
+          message: leadData.message || `Website form: ${source}`,
+          description,
+          person: {
+            firstName: leadData.firstName,
+            lastName: leadData.lastName,
+            emails: [{ value: leadData.email }],
+            phones: leadData.phone ? [{ value: leadData.phone }] : undefined,
+            addresses: leadData.address
+              ? [
+                  {
+                    street: leadData.address,
+                    city: leadData.city || 'Las Vegas',
+                    state: leadData.state || 'NV',
+                    code: leadData.zip,
+                    country: 'United States',
+                  },
+                ]
+              : undefined,
+            tags: ['Website Lead', 'Las Vegas', source],
+          },
+        }),
+      });
 
-      if (searchResult.success && searchResult.person) {
-        // Person exists, update them
-        personId = searchResult.person.id!;
-        console.log('Existing person found, updating:', personId);
-      } else {
-        // Create new person
-        const createResult = await this.createPerson(leadData);
-        if (!createResult.success) {
-          return createResult;
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Follow Up Boss Event API Error:', response.status, errorData);
+        return { success: false, error: `API Error: ${response.status} ${response.statusText}` };
+      }
+
+      // 200 = existing contact, 201 = new contact, 204 = lead flow archived (no body)
+      const text = await response.text();
+      const person = text ? (JSON.parse(text) as { id?: number | string }) : null;
+      const personId = person?.id != null ? String(person.id) : undefined;
+
+      if (personId) {
+        const taskResult = await this.createTask(personId, {
+          type: 'Follow Up',
+          name: `New website lead from ${source}`,
+          dueDate: this.getDefaultDueDate(),
+        });
+        if (!taskResult.success) {
+          console.warn('Failed to create task:', taskResult.error);
         }
-        personId = createResult.personId!;
-        console.log('New person created:', personId);
-      }
-
-      // Create event for the lead
-      const eventResult = await this.createEvent(personId, {
-        type: 'Website Lead',
-        note: `Lead from ${leadData.source} - ${leadData.message || 'No additional message'}`,
-        source: 'Website',
-        customFields: {
-          budget: leadData.budget,
-          timeline: leadData.timeline,
-          pageUrl: leadData.pageUrl,
-        },
-      });
-
-      if (!eventResult.success) {
-        console.warn('Failed to create event:', eventResult.error);
-      }
-
-      // Create follow-up task
-      const taskResult = await this.createTask(personId, {
-        type: 'Follow Up',
-        note: `New lead from website - ${leadData.firstName} ${leadData.lastName} (${leadData.email})`,
-        dueDate: this.getDefaultDueDate(),
-      });
-
-      if (!taskResult.success) {
-        console.warn('Failed to create task:', taskResult.error);
+      } else {
+        console.warn('Follow Up Boss accepted the lead but returned no contact (status', response.status, ')');
       }
 
       return { success: true, personId };

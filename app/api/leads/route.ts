@@ -41,7 +41,6 @@ export async function POST(request: NextRequest) {
     // Log lead submission attempt
     console.log('Processing lead submission:', {
       source: leadData.source,
-      email: leadData.email,
       timestamp: new Date().toISOString(),
     });
 
