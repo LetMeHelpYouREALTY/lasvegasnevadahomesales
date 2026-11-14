@@ -5,7 +5,7 @@ import { crmConfig } from '../../../config/crm-config';
 
 export async function POST(request: NextRequest) {
   try {
-    // Check if API key is configured (use fallback from config)
+    // The key lives only in the Vercel setting FOLLOW_UP_BOSS_API_KEY
     const apiKey = process.env.FOLLOW_UP_BOSS_API_KEY || crmConfig.followUpBoss.apiKey;
     if (!apiKey) {
       console.error('Follow Up Boss API key not configured');
