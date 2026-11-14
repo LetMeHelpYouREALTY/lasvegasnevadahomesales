@@ -88,8 +88,7 @@ export interface FollowUpBossTask {
   personId: string;
   type: string;
   dueDate?: string;
-  note?: string;
-  assignedTo?: string;
+  name?: string;
 }
 
 // Lead Data Interface
